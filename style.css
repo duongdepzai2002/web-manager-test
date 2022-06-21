@@ -15,6 +15,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .navbar-title {
@@ -37,6 +38,29 @@ html {
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
+}
+
+.sign-out {
+    position: absolute;
+    width: 20%;
+    height: 60px;
+    top: 100%;
+    right: 0;
+    background-color: #36474f;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 0 10px #444;
+    text-decoration: none;
+    color: #fff;
+    display: none;
+}
+
+.sign-out:hover {
+    color: #36474f;
+    background-color: #ccc;
 }
 
 .navbar-element__item span {

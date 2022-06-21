@@ -11,6 +11,10 @@
         display: none;
     }
 
+    .navbar-element__item {
+        font-size: 1.4rem;
+    }
+
     .content {
         flex-direction: column;
     }

@@ -40,11 +40,15 @@
                     <i class="fa-solid fa-angle-down"></i>
                 </div>
 
-                <div class="navbar-element__item">
+                <div class="navbar-element__item navbar-element__item-jvs">
                     <i class="icon-big fa-solid fa-circle-user"></i>
                     <span>Sung Jin Woo</span>
                     <i class="fa-solid fa-angle-down"></i>
                 </div>
+
+                <a href="#" class="sign-out">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </a>
             </div>
         </div>
         <div class="content">
@@ -286,4 +290,16 @@
         </div>
     </div>
 </body>
+
+<script>
+    const admin = document.querySelector('.navbar-element__item-jvs')
+    const signOut = document.querySelector('.sign-out')
+    admin.onclick = function(e) {
+        signOut.style.display = 'flex'
+    }
+
+    signOut.onclick = function() {
+        this.href = 'https://duongdepzai2002.github.io/Website-Gkitchen/?fbclid=IwAR347o1j-6Q9U1mgFNoiY46XVWmcWu5kTs_tcJcni49AFCgM5i3edgOQ2JQ'
+    }
+</script>
 </html>
