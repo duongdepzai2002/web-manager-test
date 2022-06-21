@@ -1,0 +1,94 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .dashboard {
+        width: 100%;
+    }
+
+    .dashboard-list {
+        display: flex;
+    }
+
+    .dashboard-text {
+        display: none;
+    }
+
+    .icon-more {
+        display: none;
+    }
+
+    .dashboard-item {
+        flex: 1;
+    }
+
+    .dashboard-item__icon {
+        padding-left: 28px;
+    }
+
+    .dashboard-item__title {
+        padding-left: 10px;
+    }
+
+    .manage-main {
+        width: 100%;
+    }
+
+    .manage-info {
+        border-bottom: 1px solid #ccc;
+        
+    }
+
+    .section {
+        width: 20%;
+    
+    }
+
+    .section-1 {
+        width: 10%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .content {
+        display: block;
+    }
+
+    .dashboard {
+        width: 100%;
+    }
+
+    .manage-main {
+        width: 100%;
+    }
+
+    .dashboard-text {
+        display: none;
+    }
+
+    .sections {
+        display: none;
+    }
+
+    .cpn {
+        display: none;
+    }
+}
