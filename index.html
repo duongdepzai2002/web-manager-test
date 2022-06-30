@@ -100,8 +100,8 @@
             </div>
             <div class="manage-main">
                 <div class="manage-main__heading">
-                    <i class="manage-main__heading-icon fa-solid fa-users"></i>
-                    <span class="manage-main__heading-title">Quản lý khách hàng</span>
+                    <i class="manage-main__heading-icon fa-solid fa-burger"></i>
+                    <span class="manage-main__heading-title">Quản lý sản phẩm</span>
                 </div>
 
                 <div class="manage-main__current">
@@ -109,43 +109,25 @@
                         <i class="manage-main__root-icon fa-solid fa-house"></i>
                         <span class="manage-main__root-text">Admin</span>
                         <span class="manage-main__root-way">/</span>
-                        <span class="manage-main__root-curr">Quản lý khách hàng</span>
+                        <span class="manage-main__root-curr">Quản lý sản phẩm</span>
                     </div>
                 </div>
 
                 <div class="manage-info">
                     <div class="manage-info__head">
                         <div class="sections">
-                            <span class="section section-bold section-1">Mã khách</span>
+                            <span class="section section-bold section-1">Mã sp</span>
                             <span class="section section-bold">Tên</span>
-                            <span class="section section-bold">Tuổi</span>
-                            <span class="section section-bold">Giới tính</span>
-                            <span class="section section-bold">Sđt</span>
+                            <span class="section section-bold">Giá</span>
+                            <span class="section section-bold">Số lượng</span>
+                            <span class="section section-bold">Xuất xứ</span>
                             <span class="cpn cpn-1">
                                 <i class="far fa-plus"></i>
                             </span>
                         </div>
                     </div>
                     <div class="manage-info-wrapper">
-                        <div class="manage-info__elements">
-                            <div class="manage-info__element">
-                                <div class="sections">
-                                    <span contenteditable="true" class="section section-1">1</span>
-                                    <span contenteditable="true" class="section section-name">Lê Tuấn Đạt</span>
-                                    <span contenteditable="true" class="section">Hocsinhyeu2002</span>
-                                    <span contenteditable="true" class="section">Yeuthuoanhmai</span>
-                                    <span contenteditable="true" class="section">20</span>
-                                </div>
-                                <div class="manage-info__wrap-component">
-                                    <span class="cpn cpn-2">
-                                        <i class="fas fa-tools"></i>
-                                    </span>
-                                    <span class="cpn cpn-3">
-                                        <i class="fas fa-trash"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -153,18 +135,15 @@
         <div class="add">
             <form action="" class="form-add">
                 <label for="" class="form-text">Id:</label>
-                <input placeholder="Id" type="text" class="form-input-1 form-input">
+                <input type="text" class="form-input-1 form-input">
                 <label for="" class="form-text">Tên:</label>
-                <input placeholder="Name" type="text" class="form-input-2 form-input">
-                <label for="" class="form-text">Tuổi:</label>
-                <input placeholder="age" type="text" class="form-input-3 form-input">
-                <label for="" class="form-text">Giới tính:</label>
-                <select name="" id="select">
-                    <option value="Nam">Nam</option>
-                    <option value="Nữ">Nữ</option>
-                </select>
-                <label for="" class="form-text">Sđt:</label>
-                <input placeholder="phone" type="text" class="form-input-4 form-input">
+                <input type="text" class="form-input-2 form-input">
+                <label for="" class="form-text">Giá:</label>
+                <input type="text" class="form-input-3 form-input">
+                <label for="" class="form-text">Số lượng:</label>
+                <input type="text" class="form-input-4 form-input">
+                <label for="" class="form-text">Xuất xứ:</label>
+                <input type="text" class="form-input-5 form-input">
                 <div class="submit">Thêm</div>
             </form>
         </div>
@@ -194,14 +173,14 @@
         var inputValue2 = $('.form-input-2').value
         var inputValue3 = $('.form-input-3').value
         var inputValue4 = $('.form-input-4').value
-        var selectValue = $('#select').value
+        var inputValue5 = $('.form-input-5').value
 
         var item = {
             id: inputValue1,
             name: inputValue2,
             age: inputValue3,
-            gender: selectValue,
-            phone: inputValue4,
+            gender: inputValue4,
+            phone: inputValue5,
         }
         data.push(item)
 
@@ -210,11 +189,11 @@
                 <div class="manage-info__elements">
                     <div class="manage-info__element">
                         <div class="sections">
-                            <span class="section section-1">${items.id}</span>
-                            <span class="section section-name">${items.name}</span>
-                            <span class="section">${items.age}</span>
-                            <span class="section">${items.gender}</span>
-                            <span class="section">${items.phone}</span>
+                            <span contenteditable="true" class="section section-1">${items.id}</span>
+                            <span contenteditable="true" class="section section-name">${items.name}</span>
+                            <span contenteditable="true" class="section">${items.age}</span>
+                            <span contenteditable="true" class="section">${items.gender}</span>
+                            <span contenteditable="true" class="section">${items.phone}</span>
                         </div>
                         <div class="manage-info__wrap-component">
                             <span class="cpn cpn-2">
@@ -234,10 +213,12 @@
         const inputForm2 = $('.form-input-2')
         const inputForm3 = $('.form-input-3')
         const inputForm4 = $('.form-input-4')
+        const inputForm5 = $('.form-input-5')
         inputForm1.value = ''
         inputForm2.value = ''
         inputForm3.value = ''
         inputForm4.value = ''
+        inputForm5.value = ''
 
         const btnDeletes = $$('.cpn-3')
         const component = $$('.manage-info__elements')
